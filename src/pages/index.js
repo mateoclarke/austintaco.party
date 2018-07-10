@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 // import Scroll from 'react-scroll-to-element'
 
 import HeroForm from '../components/HeroForm.js'
+import TacoMap from '../components/TacoMap.js'
 import COLORS from '../constants/colors.js'
 
 
@@ -35,10 +36,7 @@ const IndexPage = (props, data) => (
 
 
     {/* MAP */}
-    <div className="container" id="map">
-      <h2 className="row" style={{ color: COLORS.orange }}>MAP</h2>
-      <p className="row">Use this map to see where I’ll be eating tacos at what times.</p>
-    </div>
+    <TacoMap />
 
     {/* MERCH */}
     <div className="container-fluid" style={{ background: COLORS.teal, color: COLORS.white }} id="merch">

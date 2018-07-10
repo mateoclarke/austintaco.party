@@ -37,26 +37,28 @@ class Header extends Component {
     console.log("shouldLoad",this.state.shouldLoad)
 
     return (
-      <div
-        className="container-fluid"
-      >
-        <h1 style={{
-          color: '#FF6A02',
-          textAlign: 'right',
-          paddingTop: '2rem',
-          fontFamily: 'PhosphateInline',
-        }}>
+      <div className="container-fluid">
+        <div className="container">
+          <h1 style={{
+            color: '#FF6A02',
+            textAlign: 'right',
+            paddingTop: '2rem',
+            fontFamily: 'PhosphateInline',
+          }}>
           TOUR DE TACO
         </h1>
+        </div>
         <div className="row justify-content-end"
           style={{
             background: '#EA3159',
           }}
         >
-          { navItemsArray.map((navitem, i) => (
-              this.state.shouldLoad &&
-              <HeaderScrollLink navitem={navitem} i={i} key={i}/>
+          <div className="container">
+            { navItemsArray.map((navitem, i) => (
+                this.state.shouldLoad &&
+                <HeaderScrollLink navitem={navitem} i={i} key={i}/>
             ))}
+          </div>
         </div>
       </div>
     );

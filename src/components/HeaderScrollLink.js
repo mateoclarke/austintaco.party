@@ -8,8 +8,8 @@ const HeaderScrollLink = ({ navitem, i }) => (
       color: 'white',
       textAlign: 'right',
       margin: '1rem',
-      float: 'right',
-      display: 'block',
+      // float: 'right',
+      // display: 'block',
     }}>
       {navitem.text}
     </span>
