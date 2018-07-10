@@ -22,7 +22,8 @@
     "react-helmet": "^5.2.0",
     "react-no-ssr": "^1.1.0",
     "react-scroll-to-element": "^0.2.0",
-    "reactstrap": "^6.1.0"
+    "reactstrap": "^6.1.0",
+    "recompose": "^0.27.1"
   },
   "keywords": [
     "gatsby"

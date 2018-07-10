@@ -34,8 +34,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log("shouldLoad",this.state.shouldLoad)
-
     return (
       <div className="container-fluid">
         <div className="container">

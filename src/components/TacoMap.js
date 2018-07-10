@@ -1,16 +1,51 @@
 import React from 'react'
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
+const { compose, withProps, withStateHandlers } = require("recompose");
+
 import COLORS from '../constants/colors.js'
+import taquerias from '../constants/taquerias.js'
 
-
-const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+const MyMapComponent = compose(
+  withStateHandlers(
+    ({ initialActiveWindow = null }) => ({
+      activeId: initialActiveWindow,
+    }),
+    {
+      onToggleOpen: ({activeId}) => (newId) => ({
+        activeId: newId,
+      })
+    }
+  ),
+  withScriptjs,
+  withGoogleMap
+)(props =>
   <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
+    defaultZoom={12}
+    defaultCenter={{ lat: 30.2672086, lng: -97.745644 }}
   >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} />}
+    {
+      taquerias.features.map((marker, i) => {
+        return (
+          <Marker
+            key={i}
+            position={{
+              lat: marker.properties.Latitude,
+              lng: marker.properties.Longitude
+            }}
+            onClick={() => props.onToggleOpen(marker.id)}
+          >
+            {
+              (props.activeId === marker.id) &&
+              <InfoWindow onCloseClick={() => props.onToggleOpen(null)}>
+                <span>{marker.properties.Name}</span>
+              </InfoWindow>
+            }
+          </Marker>
+        )
+      })
+    }
   </GoogleMap>
-))
+);
 
 const TacoMap = ({  }) => (
   <div className="container" id="map">
