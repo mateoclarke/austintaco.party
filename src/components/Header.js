@@ -1,5 +1,5 @@
-import React from 'react';
-import Scroll from 'react-scroll-to-element';
+import React, { Component } from 'react';
+let HeaderScrollLink;
 
 const navItemsArray = [
   {
@@ -20,40 +20,47 @@ const navItemsArray = [
   },
 ];
 
-const Header = ({}) => (
-  <div
-    className="container-fluid"
-  >
-    <h1 style={{
-      color: '#FF6A02',
-      textAlign: 'right',
-      paddingTop: '2rem',
-      fontFamily: 'PhosphateInline',
-    }}>
-      TOUR DE TACO
-    </h1>
-    <div className="row justify-content-end"
-      style={{
-        background: '#EA3159',
-      }}
-    >
-      { navItemsArray.map((navitem, i) => (
-          <Scroll type="id" element={navitem.link} key={i}>
-            <span style={{
-              textTransform: 'uppercase',
-              color: 'white',
-              textAlign: 'right',
-              margin: '1rem',
-              float: 'right',
-              display: 'block',
-            }}>
-              {navitem.text}
-            </span>
-          </Scroll>
-        ))}
-    </div>
-  </div>
-);
+class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      shouldLoad: false
+    }
+  }
 
+  componentDidMount(){
+    HeaderScrollLink = require('./HeaderScrollLink.js')
+    this.setState({ shouldLoad: true })
+  }
+
+  render() {
+    console.log("shouldLoad",this.state.shouldLoad)
+
+    return (
+      <div
+        className="container-fluid"
+      >
+        <h1 style={{
+          color: '#FF6A02',
+          textAlign: 'right',
+          paddingTop: '2rem',
+          fontFamily: 'PhosphateInline',
+        }}>
+          TOUR DE TACO
+        </h1>
+        <div className="row justify-content-end"
+          style={{
+            background: '#EA3159',
+          }}
+        >
+          { navItemsArray.map((navitem, i) => (
+              this.state.shouldLoad &&
+              <HeaderScrollLink navitem={navitem} i={i} key={i}/>
+            ))}
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Header;

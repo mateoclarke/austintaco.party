@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
-import Scroll from 'react-scroll-to-element'
+// import Scroll from 'react-scroll-to-element'
 
 import HeroForm from '../components/HeroForm.js'
 import COLORS from '../constants/colors.js'
@@ -26,9 +26,9 @@ const IndexPage = (props, data) => (
         <div>
           <h3>FINAL FIESTA</h3>
           <p>Saturday July 28th, 6:30PM</p>
-          <Scroll type="id" element="rsvp">
+          {/* <Scroll type="id" element="rsvp"> */}
             RSVP
-          </Scroll>
+          {/* </Scroll> */}
         </div>
       </div>
     </div>
