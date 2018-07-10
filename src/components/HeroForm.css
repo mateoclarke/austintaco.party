@@ -1,0 +1,38 @@
+.ContactCouncilForm {
+  margin: auto;
+  background: #5faf36;
+  z-index: 2;
+}
+
+.ContactCouncilForm h5 {
+  font-size: 26px;
+  color: white;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 480px)  {
+  .ContactCouncilForm {
+    margin-top: -3rem;
+  }
+}
+
+@media only screen and (min-width: 481px)  {
+  .ContactCouncilForm {
+    margin-top: -20rem;
+    max-width: 450px;
+    border-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 800px)  {
+  .ContactCouncilForm {
+    margin-top: -35rem;
+    box-shadow: 0.5rem 0.5rem 3rem;
+    max-width: 450px;
+  }
+
+  .ContactCouncilForm h5 {
+    font-size: 32px;
+  }
+}

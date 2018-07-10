@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'PhosphateInline'; /*a name to be used later*/
+    src: url('../fonts/phosphateinline-webfont.woff2') format('woff2'),
+         url('../fonts/phosphateinline-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheBrooklynBold'; /*a name to be used later*/
+    src: url('../fonts/the_brooklyn_bold_demo-webfont.woff2') format('woff2'),
+         url('../fonts/the_brooklyn_bold_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, .body {
+  height: 100%;
+}
+
+body, .body {
+  font-family: 'TheBrooklynBold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.body {
+  max-width: 100%;
+  /* padding-top: 86px; */
+}
+
+@media only screen and (max-width: 480px) {
+  /* .body {
+    padding-top: 62px;
+  } */
+}
+
+.Footer a:hover span.fa {
+    color: #424020;
+}

@@ -1,0 +1,10 @@
+.Footer {
+  width: 100%;
+  background: #60AF36;
+  color: white;
+  flex-shrink: 0;
+}
+
+.Footer a {
+  color: white;
+}

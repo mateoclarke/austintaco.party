@@ -1,0 +1,33 @@
+
+
+.deemphasize {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.content-wrapper {
+  position: relative;
+  top: 70px;
+  @media only screen and (max-width : 768px) {
+    top: 0;
+  }
+}
+
+.marginauto {
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   background: red;
+}
