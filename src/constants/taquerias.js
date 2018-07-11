@@ -74,7 +74,7 @@ const taquerias = {
         "properties": {
             "": 5,
             "Address": "6301 E Riverside Dr\n Austin, TX 78741",
-            "Time": "Sun Jul 29 20:30:00 GMT-05:00 2018",
+            "Time": "Fri Jul 27 20:30:00 GMT-05:00 2018",
             "Latitude": 30.2245596,
             "Longitude": -97.7034393,
             "Name": "La Sabroza",
@@ -210,7 +210,7 @@ const taquerias = {
         }
     }, {
         "geometry": {
-            "coordinates": [-97.450113, -97.450113],
+            "coordinates": [-97.729767, 30.242166],
             "type": "Point"
         },
         "id": 14,
@@ -219,8 +219,8 @@ const taquerias = {
             "": 14,
             "Address": "1911 E Riverside Dr, Austin, TX 78741",
             "Time": "Sat Jul 28 15:30:00 GMT-05:00 2018",
-            "Latitude": "-97.450113 27.699322",
-            "Longitude": "-97.450113 27.699322",
+            "Latitude": 30.242166,
+            "Longitude": -97.729767,
             "Name": "Rosita\u2019s Al Pastor",
             "Neighborhood": "street"
         }
