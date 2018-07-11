@@ -93,19 +93,19 @@ class RSVPForm extends Component {
               onChange={this.handleChange}
             />
             <div className="form-group">
-              <label htmlFor="zipcode">Which stops will you join us?</label>
+              <label htmlFor="zipcode">At which taquerias do you plan to join us?</label>
               { taquerias.features.map((marker, i) => {
                 return (
-                  <div class="form-check" key={i}>
+                  <div className="form-check" key={i}>
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       value={marker.properties.Name}
                       id={marker.id}
                       name="locations"
                       onChange={this.toggleCheckbox}
                     />
-                    <label class="form-check-label" for={marker.id}>
+                    <label className="form-check-label" htmlFor={marker.id}>
                       {`${ moment(marker.properties.Time)
                         .tz('America/Chicago')
                         .format('ddd, M/D h:mma')} --
@@ -117,16 +117,16 @@ class RSVPForm extends Component {
                   </div>
                 )
               })}
-              <div class="form-check">
+              <div className="form-check">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   value="mi casa"
                   id="15"
                   name="locations"
                   onChange={this.toggleCheckbox}
                 />
-                <label class="form-check-label" for="15">
+                <label className="form-check-label" htmlFor="15">
                   {`Sat, 7/28 5:30 -- Taco Party at mi casa`}
                 </label>
               </div>
