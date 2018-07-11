@@ -79,7 +79,7 @@ class RSVPForm extends Component {
               { taquerias.features.map((marker, i) => {
                 return (
                   <div class="form-check" key={i}>
-                    <input class="form-check-input" type="checkbox" value="" id={marker.id} name={marker.properties.Name}/>
+                    <input class="form-check-input" type="checkbox" value={marker.properties.Name} id={marker.id} name={marker.properties.Name}/>
                     <label class="form-check-label" for={marker.id}>
                       {`${ moment(marker.properties.Time)
                         .tz('America/Chicago')
