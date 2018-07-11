@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { navigateTo } from "gatsby-link";
 import moment from 'moment-timezone'
+import { pull, includes } from 'lodash'
 
 import COLORS from '../constants/colors.js'
 import taquerias from '../constants/taquerias.js'
@@ -19,12 +20,29 @@ class RSVPForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      locations: []
+    };
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  toggleCheckbox = e => {
+    const currentLocations = this.state.locations
+    const shouldRemoveLocation = includes(currentLocations, e.target.value)
+
+    if (shouldRemoveLocation) {
+      this.setState({
+        currentLocations: pull(currentLocations, e.target.value)
+      })
+    } else {
+      this.setState({
+        currentLocations: currentLocations.push(e.target.value)
+      })
+    }
+  }
 
 
   handleSubmit = e => {
@@ -85,7 +103,7 @@ class RSVPForm extends Component {
                       value={marker.properties.Name}
                       id={marker.id}
                       name="locations"
-                      onChange={this.handleChange}
+                      onChange={this.toggleCheckbox}
                     />
                     <label class="form-check-label" for={marker.id}>
                       {`${ moment(marker.properties.Time)
@@ -100,7 +118,14 @@ class RSVPForm extends Component {
                 )
               })}
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="15" />
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="mi casa"
+                  id="15"
+                  name="locations"
+                  onChange={this.toggleCheckbox}
+                />
                 <label class="form-check-label" for="15">
                   {`Sat, 7/28 5:30 -- Taco Party at mi casa`}
                 </label>
