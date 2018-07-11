@@ -12,14 +12,7 @@ const MyMapComponent = compose(
       activeId: initialActiveWindow,
     }),
     {
-      onToggleOpen: ({activeId}) => (newId) => {
-        console.log(newId)
-        return (
-          {
-            activeId: newId,
-          }
-        )
-      }
+      onToggleOpen: ({activeId}) => (newId) => ({ activeId: newId })
     }
   ),
   withScriptjs,
@@ -39,7 +32,7 @@ const MyMapComponent = compose(
               style={{
                 flex: '1',
                 listStyle: 'none',
-                padding: '.1rem 1rem',
+                padding: '.1rem .5rem',
                 textAlign: 'center',
                 borderBottom: `1px solid ${COLORS.white}`,
               }}
@@ -60,7 +53,6 @@ const MyMapComponent = compose(
     >
       {
         taquerias.features.map((marker, i) => {
-          console.log(marker.properties.Name)
           return (
             <Marker
               key={i}
@@ -89,9 +81,9 @@ const MyMapComponent = compose(
 );
 
 const TacoMap = ({  }) => (
-  <div className="container" id="map">
+  <div className="container py-5" id="map">
     <h2 className="row" style={{ color: COLORS.orange }}>MAP</h2>
-    <p className="row">Use this map to see where I’ll be eating tacos at what times.</p>
+    <p className="row">Use this map to follow along with tour de tacos times and locations.</p>
     <MyMapComponent
       isMarkerShown
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8DMYFQ0nLMEaNx8hQGeulYU9JTkNgzkw&v=3.exp&libraries=geometry,drawing,places"

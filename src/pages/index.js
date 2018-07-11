@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 
 import HeroForm from '../components/HeroForm.js'
 import TacoMap from '../components/TacoMap.js'
+import RSVPForm from '../components/RSVPForm.js'
 import COLORS from '../constants/colors.js'
 
 
@@ -13,7 +14,7 @@ const IndexPage = (props, data) => (
   <div>
 
     {/* About section */}
-    <div className="container" id="about">
+    <div className="container py-5" id="about">
       <h2 style={{ color: COLORS.orange }}>ABOUT</h2>
       <p>My golden birthday is going to be spent doing two things I love the most: eating tacos & spending
   time with friends. Inspired by....the plan is to eat 30 tacos in 30 hours across Austin. Join me for this
@@ -39,7 +40,7 @@ const IndexPage = (props, data) => (
     <TacoMap />
 
     {/* MERCH */}
-    <div className="container-fluid" style={{ background: COLORS.teal, color: COLORS.white }} id="merch">
+    <div className="container-fluid py-5" style={{ background: COLORS.teal, color: COLORS.white }} id="merch">
       <div className="container">
         <h2 className="row">MERCH</h2>
           <div className="row">
@@ -57,27 +58,17 @@ const IndexPage = (props, data) => (
       </div>
     </div>
 
-
-    {/* RSVP */}
-    <div className="container" id="rsvp">
-      <h2 className="row" style={{ color: COLORS.orange }}>RSVP</h2>
-      <form action="" className="row">
-        <label htmlFor="">Name</label>
-        <input type="text"/>
-        <label htmlFor="">Which stops are you able to join?</label>
-        {/* TODO all the options */}
-      </form>
-    </div>
+    <RSVPForm />
 
     {/* SOCIAL ICONS */}
-    <div className="container-fluid" style={{ background: COLORS.orange, color: COLORS.white }}>
+    <div className="container-fluid py-5" style={{ background: COLORS.orange, color: COLORS.white }}>
       <div className="container">
         <h2>Social Icons</h2>
       </div>
     </div>
 
     {/* HASHTAG */}
-    <div className="container-fluid" style={{ background: COLORS.pink, color: COLORS.white }}>
+    <div className="container-fluid py-5" style={{ background: COLORS.pink, color: COLORS.white }}>
       <div className="row">
         #TOURDETACO
       </div>
