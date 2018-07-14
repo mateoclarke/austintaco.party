@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `atxtacotour.com`,
+    siteUrl: `https://atxtacotour.com`,
     title: `Austin Tour de Taco`,
     keywords:  `
       mateo,
