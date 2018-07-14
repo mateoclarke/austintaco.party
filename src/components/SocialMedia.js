@@ -22,7 +22,7 @@ const SocialMedia = ({  }) => (
           <a href="https://www.facebook.com/events/197213990967589/" className="mr-5 col-2">
             <FontAwesomeIcon icon={faFacebookSquare} size="5x" />
           </a>
-          <a href="https://www.instagram.com/explore/tags/tourdetaco/" clasName="col-2">
+          <a href="https://www.instagram.com/explore/tags/tourdetaco/" className="col-2">
             <FontAwesomeIcon icon={faInstagram} size="5x" />
           </a>
         </div>

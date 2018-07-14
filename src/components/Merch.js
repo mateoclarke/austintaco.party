@@ -123,7 +123,7 @@ class Merch extends Component {
                     <option value="venmo">Venmo</option>
                     <option value="cash_app">Cash App</option>
                   </select>
-                  <div className="form-group" style={{ width: '100%', display: this.state.payment ? 'none' : 'block' }}>
+                  <div className="form-group" style={{ width: '100%', display: !this.state.payment ? 'none' : 'block' }}>
                     <label className="sr-only" htmlFor="username">Username</label>
                     <input className="form-control form-control-lg mb-2"
                       name="username" type="text" placeholder={ this.state.payment === 'paypal' ? 'Email' : 'Phone Number or Username'}
