@@ -39,6 +39,7 @@ class IndexPage extends Component {
             display: 'flex', alignItems: 'center',
             justifyContent: 'center',
             maxHeight: '30vh',
+            padding: '0',
           }}>
               <video autoPlay loop muted playsInline
                 ref={this.video}
@@ -57,8 +58,7 @@ class IndexPage extends Component {
                 textTransform: 'uppercase',
                 textShadow: '2px 2px 5px black',
                 position: 'absolute',
-                fontSize: '3rem',
-              }}>
+              }} className="Banner__title">
                 Join my mission to eat <br/>
                 30 tacos in 30 hours for <br/>
                 my 30th birthday</h2>

@@ -55,6 +55,16 @@ a:hover {
   } */
 }
 
+.Banner__title {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .Banner__title {
+    font-size: 2rem;
+  }
+}
+
 .Footer a:hover span.fa {
     color: #424020;
 }
