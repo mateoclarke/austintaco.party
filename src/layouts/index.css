@@ -25,6 +25,21 @@ body, .body {
   height: 100vh;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  color: #5195CF;
+}
+a:hover {
+  color: #FF6A02 !important;
+}
+
+.social-media a {
+  color: white !important;
+}
+
 .content {
   flex: 1 0 auto;
 }
@@ -42,4 +57,13 @@ body, .body {
 
 .Footer a:hover span.fa {
     color: #424020;
+}
+
+.gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#67a9da+0,4e8bbd+99 */
+  background: #67a9da; /* Old browsers */
+  background: -moz-linear-gradient(left, #67a9da 0%, #4e8bbd 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #67a9da 0%,#4e8bbd 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #67a9da 0%,#4e8bbd 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67a9da', endColorstr='#4e8bbd',GradientType=1 ); /* IE6-9 */
 }

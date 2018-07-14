@@ -8,7 +8,7 @@ import taquerias from '../constants/taquerias.js'
 
 const MyMapComponent = compose(
   withStateHandlers(
-    ({ initialActiveWindow = null }) => ({
+    ({ initialActiveWindow = 1 }) => ({
       activeId: initialActiveWindow,
     }),
     {
@@ -32,9 +32,11 @@ const MyMapComponent = compose(
               style={{
                 flex: '1',
                 listStyle: 'none',
-                padding: '.1rem .5rem',
+                padding: '.3rem .5rem',
                 textAlign: 'center',
                 borderBottom: `1px solid ${COLORS.white}`,
+                background: (props.activeId === marker.id) ? COLORS.pink : COLORS.blue,
+                cursor: 'pointer',
               }}
             >
               {
@@ -64,11 +66,13 @@ const MyMapComponent = compose(
             >
               {
                 (props.activeId === marker.id) &&
-                <InfoWindow onCloseClick={() => props.onToggleOpen('')}>
-                  <div>
+                <InfoWindow onCloseClick={() => props.onToggleOpen('')}
+
+                >
+                  <div style={{ maxWidth: '150px' }}>
                     <h4>{marker.properties.Name}</h4>
-                    <span>{marker.properties.Address}</span>
-                    <p>{moment(marker.properties.Time).tz('America/Chicago').format('dddd, MMMM D h:mma')}</p>
+                    <span>{marker.properties.Address}</span><br/>
+                    <span>{moment(marker.properties.Time).tz('America/Chicago').format('dddd, MMMM D h:mma')}</span>
                   </div>
                 </InfoWindow>
               }
@@ -82,13 +86,15 @@ const MyMapComponent = compose(
 
 const TacoMap = ({  }) => (
   <div className="container py-5" id="map">
-    <h2 className="row" style={{ color: COLORS.orange }}>MAP</h2>
-    <p className="row">Use this map to follow along with tour de tacos times and locations.</p>
+    <div>
+      <h2 style={{ color: COLORS.orange }}>MAP</h2>
+      <p>Use this map to plan your journey along the Tour de Taco.</p>
+    </div>
     <MyMapComponent
       isMarkerShown
       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8DMYFQ0nLMEaNx8hQGeulYU9JTkNgzkw&v=3.exp&libraries=geometry,drawing,places"
       loadingElement={<div style={{ height: `100%` }} />}
-      containerElement={<div style={{ height: `400px`, display: 'flex' }} />}
+      containerElement={<div style={{ height: `500px`, display: 'flex' }} />}
       mapElement={<div style={{ height: `100%`, flex: '1' }} />}
     />
   </div>

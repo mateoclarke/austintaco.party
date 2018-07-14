@@ -8,9 +8,8 @@ class Thanks extends Component {
     return (
       <div className="container p-5">
         <div className="row">
-          <h1>Oh yeah! See you on the Tour de Taco.</h1>
-          <p>Expect a reminder email before Friday, July 27th.</p>
-          <p>Don't forget to <a href="/#merch">order a special edition Tour de Taco pin</a>.</p>
+          <h1>Thanks for ordering! </h1>
+          <p>Once your pin is ready, we'll follow up on payment and delivery.</p>
         </div>
         <div className="row">
           <Link to="/">Go back to the homepage</Link>

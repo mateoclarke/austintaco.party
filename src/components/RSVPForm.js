@@ -63,7 +63,7 @@ class RSVPForm extends Component {
   render() {
     return (
       <div className="container py-5" id="rsvp">
-        <h2 className="row" style={{ color: COLORS.orange }}>RSVP</h2>
+        <h2 style={{ color: COLORS.orange }}>RSVP</h2>
         <form name="rsvp" className="form"
           method="post"
           action="/see-you-soon/"
@@ -79,9 +79,6 @@ class RSVPForm extends Component {
             </label>
           </p>
           <div className="form-group row p-3 p-md-4 container RSVPForm">
-            <h3>
-              Join the Tour de Taco and help me reach my goal of eating 30 tacos in 30 hours for my 30th birthday.
-            </h3>
             <label className="sr-only" htmlFor="name">Name</label>
             <input className="form-control form-control-lg col-12 mb-2"
               name="name" type="text" placeholder="Name"
@@ -93,7 +90,7 @@ class RSVPForm extends Component {
               onChange={this.handleChange}
             />
             <div className="form-group">
-              <label htmlFor="zipcode">At which taquerias do you plan to join us?</label>
+              <label htmlFor="zipcode">At which stops do you plan to join me?</label>
               { taquerias.features.map((marker, i) => {
                 return (
                   <div className="form-check" key={i}>
@@ -127,11 +124,15 @@ class RSVPForm extends Component {
                   onChange={this.toggleCheckbox}
                 />
                 <label className="form-check-label" htmlFor="15">
-                  {`Sat, 7/28 5:30 -- Taco Party at mi casa`}
+                  {`Sat, 7/28 6:00pm -- Final Stop Fiesta at my house`}
                 </label>
               </div>
             </div>
-            <button className="col-12 mb-2 btn btn-info btn-lg" type="submit">Submit</button>
+            <button className="col-12 mb-2 btn btn-info btn-lg" type="submit"
+              style={{ background: COLORS.blue }}
+            >
+              RSVP
+            </button>
           </div>
         </form>
       </div>

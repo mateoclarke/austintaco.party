@@ -9,7 +9,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 1,
-            "Address": "407 Lavaca St, Austin, TX 78701",
+            "Address": "407 Lavaca St",
             "Time": "Fri Jul 27 12:30:00 GMT-05:00 2018",
             "Latitude": 30.2672086,
             "Longitude": -97.745644,
@@ -25,7 +25,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 2,
-            "Address": "520 W 6th St, Austin, TX 78701",
+            "Address": "520 W 6th St",
             "Time": "Fri Jul 27 13:30:00 GMT-05:00 2018",
             "Latitude": 30.2697912,
             "Longitude": -97.7480787,
@@ -41,7 +41,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 3,
-            "Address": "2011 S 1st St, Austin, TX 78704",
+            "Address": "2011 S 1st St",
             "Time": "Fri Jul 27 18:30:00 GMT-05:00 2018",
             "Latitude": 30.2448692,
             "Longitude": -97.7574418999999,
@@ -57,7 +57,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 4,
-            "Address": "2803 S Lamar Blvd, Austin, TX 78704",
+            "Address": "2803 S Lamar Blvd",
             "Time": "Fri Jul 27 19:30:00 GMT-05:00 2018",
             "Latitude": 30.2435326,
             "Longitude": -97.7818978999999,
@@ -73,7 +73,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 5,
-            "Address": "6301 E Riverside Dr\n Austin, TX 78741",
+            "Address": "6301 E Riverside Dr",
             "Time": "Fri Jul 27 20:30:00 GMT-05:00 2018",
             "Latitude": 30.2245596,
             "Longitude": -97.7034393,
@@ -89,7 +89,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 6,
-            "Address": "502 Brushy St, Austin, TX 78702",
+            "Address": "502 Brushy St",
             "Time": "Fri Jul 27 21:30:00 GMT-05:00 2018",
             "Latitude": 30.264827,
             "Longitude": -97.7341584,
@@ -105,7 +105,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 7,
-            "Address": "9003 Waterford Centre Blvd Suite 180, Austin, TX 78758",
+            "Address": "9003 Waterford Centre Blvd Suite 180",
             "Time": "Sat Jul 28 08:30:00 GMT-05:00 2018",
             "Latitude": 30.3756664,
             "Longitude": -97.729237,
@@ -121,7 +121,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 8,
-            "Address": "102 W Powell Ln, Austin, TX 78753",
+            "Address": "102 W Powell Ln",
             "Time": "Sat Jul 28 09:30:00 GMT-05:00 2018",
             "Latitude": 30.3480376,
             "Longitude": -97.703338,
@@ -137,7 +137,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 9,
-            "Address": "4301 Duval St, Austin, TX 78701",
+            "Address": "4301 Duval St",
             "Time": "Sat Jul 28 10:30:00 GMT-05:00 2018",
             "Latitude": 30.3047214,
             "Longitude": -97.7257365999999,
@@ -153,7 +153,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 10,
-            "Address": "5301 Manor Rd, Austin, TX 78723",
+            "Address": "5301 Manor Rd",
             "Time": "Sat Jul 28 11:30:00 GMT-05:00 2018",
             "Latitude": 30.2999967,
             "Longitude": -97.6854754,
@@ -169,7 +169,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 11,
-            "Address": "2611 Manor Rd, Austin, TX ",
+            "Address": "2611 Manor Rd",
             "Time": "Sat Jul 28 12:30:00 GMT-05:00 2018",
             "Latitude": 30.2847001,
             "Longitude": -97.714815,
@@ -185,7 +185,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 12,
-            "Address": "2305 E 7th St, Austin, TX 78702",
+            "Address": "2305 E 7th St",
             "Time": "Sat Jul 28 13:30:00 GMT-05:00 2018",
             "Latitude": 30.2610769,
             "Longitude": -97.7166786999999,
@@ -201,7 +201,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 13,
-            "Address": "1401 E 7th St, Austin, TX 78702",
+            "Address": "1401 E 7th St",
             "Time": "Sat Jul 28 14:30:00 GMT-05:00 2018",
             "Latitude": 30.2643287,
             "Longitude": -97.7279853,
@@ -217,7 +217,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 14,
-            "Address": "1911 E Riverside Dr, Austin, TX 78741",
+            "Address": "1911 E Riverside Dr",
             "Time": "Sat Jul 28 15:30:00 GMT-05:00 2018",
             "Latitude": 30.242166,
             "Longitude": -97.729767,

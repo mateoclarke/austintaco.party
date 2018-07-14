@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
-import Navigation from '../components/Navigation'
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Header from '../components/Header'
 import './index.css'
 
@@ -16,7 +15,7 @@ import favico from '../static/favicon.ico'
 import safaritab from '../static/safari-pinned-tab.svg'
 
 const Layout = ({ children, data }) => (
-  <div style={{ minHeight: '100%', position: 'relative' }} className="body">
+  <div className="body">
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -34,11 +33,16 @@ const Layout = ({ children, data }) => (
       <meta name="msapplication-config" content="/static/browserconfig.xml"/>
       <meta name="theme-color" content="#ffffff"/>
     </Helmet>
-    <Header />
+    <ParallaxProvider>
+      <Header />
+      <div className="content"
+        // style={{ paddingTop: '144px' }}
+      >
+        {children()}
+      </div>
+    </ParallaxProvider>
 
-    <div className="content">
-      {children()}
-    </div>
+
   </div>
 )
 

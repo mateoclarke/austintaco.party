@@ -1,80 +1,106 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import Img from 'gatsby-image'
-// import Scroll from 'react-scroll-to-element'
 
+import About from '../components/About.js'
+import Merch from '../components/Merch.js'
 import HeroForm from '../components/HeroForm.js'
 import TacoMap from '../components/TacoMap.js'
 import RSVPForm from '../components/RSVPForm.js'
+import SocialMedia from '../components/SocialMedia.js'
 import COLORS from '../constants/colors.js'
 
+import { Parallax } from 'react-scroll-parallax';
 
-const IndexPage = (props, data) => (
+import webm from '../img/uglyd3.webm'
+import mp4 from '../img/uglyd3.mp4'
 
-  <div>
+class IndexPage extends Component {
 
-    {/* About section */}
-    <div className="container py-5" id="about">
-      <h2 style={{ color: COLORS.orange }}>ABOUT</h2>
-      <p>My golden birthday is going to be spent doing two things I love the most: eating tacos & spending
-  time with friends. Inspired by....the plan is to eat 30 tacos in 30 hours across Austin. Join me for this
-  pub-crawl style celebration, help me finish tacos, and then come back to our place to celebrate. </p>
-      <div className="row justify-content-around">
-        <div>
-          <h3>TACO TOUR</h3>
-          <p>Friday July 27th - Saturday July 28th</p>
-          <p>Map below for locations & times</p>
-        </div>
-        <div>
-          <h3>FINAL FIESTA</h3>
-          <p>Saturday July 28th, 6:30PM</p>
-          {/* <Scroll type="id" element="rsvp"> */}
-            RSVP
-          {/* </Scroll> */}
-        </div>
-      </div>
-    </div>
-
-
-    {/* MAP */}
-    <TacoMap />
-
-    {/* MERCH */}
-    <div className="container-fluid py-5" style={{ background: COLORS.teal, color: COLORS.white }} id="merch">
-      <div className="container">
-        <h2 className="row">MERCH</h2>
-          <div className="row">
-
-          <div className="col-4">
-            picture
+  render() {
+    return (
+      <div>
+        <Parallax
+          slowerScrollRate={true}
+          offsetYMin={-200}
+          offsetYMax={100}
+          className="gradient"
+          style={{ overflow: 'hidden '}}
+        >
+          <div className="container" style={{
+            display: 'flex', alignItems: 'center',
+            justifyContent: 'center',
+            maxHeight: '30vh',
+          }}>
+              <video autoPlay loop muted playsInline
+                style={{
+                  flex: '1 1 0%',
+                  width: '100%',
+                  objectFit: 'fill',
+                }}>
+                <source src={webm} type="video/webm" />
+                <source src={mp4} type="video/mp4" />
+              </video>
+              <h2 style={{
+                textAlign: 'center',
+                color: 'white',
+                textTransform: 'uppercase',
+                textShadow: '2px 2px 5px black',
+                position: 'absolute',
+                fontSize: '3rem',
+              }}>
+                Join my mission to eat <br/>
+                30 tacos in 30 hours for <br/>
+                my 30th birthday</h2>
           </div>
-          <div className="col-8">
-            For $10 or more, you can order a custom-designed,
-    handmade pin to commemorate Tour de Taco. All of
-    the proceeds raised from pin sales will be donated to
-    organizations that are resisting Trump's seperation of immigrant families.
+        </Parallax>
+        <Parallax
+          offsetYMin={0}
+          offsetYMax={0}
+        >
+          <div style={{
+            backgroundColor: 'white',
+            zIndex: 1,
+          }}>
+            <TacoMap />
+            <About />
+            <Merch
+              merchImage={this.props.data.merchImage}
+              tcrpLogo={this.props.data.tcrpLogo}
+              raicesLogo={this.props.data.raicesLogo}
+            />
+            <RSVPForm />
+            <SocialMedia />
           </div>
-        </div>
+        </Parallax>
       </div>
-    </div>
+    );
+  }
 
-    <RSVPForm />
+}
 
-    {/* SOCIAL ICONS */}
-    <div className="container-fluid py-5" style={{ background: COLORS.orange, color: COLORS.white }}>
-      <div className="container">
-        <h2>Social Icons</h2>
-      </div>
-    </div>
+export default IndexPage;
 
-    {/* HASHTAG */}
-    <div className="container-fluid py-5" style={{ background: COLORS.pink, color: COLORS.white }}>
-      <div className="row">
-        #TOURDETACO
-      </div>
-    </div>
-
-  </div>
-)
-
-export default IndexPage
+export const query = graphql`
+  query IndexPageQuery {
+    merchImage: imageSharp(id: { regex: "/taco_pin_sm_sq/" }) {
+      sizes(maxWidth: 1500, rotate: 180) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    tacoGif: imageSharp(id: { regex: "/uglyd1_loop/" }) {
+      sizes(maxWidth: 1500, rotate: 180) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    tcrpLogo: imageSharp(id: { regex: "/tcrp_logo/" }) {
+      sizes(maxWidth: 1500, rotate: 180) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    raicesLogo: imageSharp(id: { regex: "/raices_logo/" }) {
+      sizes(maxWidth: 1500, rotate: 180) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
