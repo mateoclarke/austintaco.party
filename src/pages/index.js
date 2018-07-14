@@ -15,6 +15,15 @@ import webm from '../img/uglyd3.webm'
 import mp4 from '../img/uglyd3.mp4'
 
 class IndexPage extends Component {
+  constructor(props) {
+    super(props)
+    this.video = React.createRef()
+  }
+
+  componentDidMount () {
+    console.log(this.video)
+    this.video.current.play()
+  }
 
   render() {
     return (
@@ -32,6 +41,7 @@ class IndexPage extends Component {
             maxHeight: '30vh',
           }}>
               <video autoPlay loop muted playsInline
+                ref={this.video}
                 style={{
                   flex: '1 1 0%',
                   width: '100%',

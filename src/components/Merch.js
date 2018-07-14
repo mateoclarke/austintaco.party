@@ -39,7 +39,6 @@ class Merch extends Component {
   };
 
   render() {
-    console.log(this.props)
     return (
       <div
         id="merch"
