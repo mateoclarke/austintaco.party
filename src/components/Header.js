@@ -42,7 +42,6 @@ class Header extends Component {
     return (
       <header
         style={{
-          // position: 'fixed',
           width: '100%',
           backgroundColor: COLORS.white,
           zIndex: 5,
@@ -51,15 +50,11 @@ class Header extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="container">
-              {/* <video autoPlay loop muted playsInline>
-                <source src={webm} type="video/webm" />
-                <source src={mp4} type="video/mp4" />
-              </video> */}
               <h1 style={{
                 color: COLORS.orange,
                 textAlign: 'right',
                 paddingTop: '2rem',
-                fontFamily: 'PhosphateInline',
+                fontFamily: `'PhosphateInline', 'Impact', serif`,
               }}>
                 TOUR DE TACO
               </h1>

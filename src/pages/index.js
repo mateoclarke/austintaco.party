@@ -41,27 +41,27 @@ class IndexPage extends Component {
             maxHeight: '30vh',
             padding: '0',
           }}>
-              <video autoPlay loop muted playsInline
-                ref={this.video}
-                poster={png}
-                style={{
-                  flex: '1 1 0%',
-                  width: '100%',
-                  objectFit: 'fill',
-                }}>
-                <source src={webm} type="video/webm" />
-                <source src={mp4} type="video/mp4" />
-              </video>
-              <h2 style={{
-                textAlign: 'center',
-                color: 'white',
-                textTransform: 'uppercase',
-                textShadow: '2px 2px 5px black',
-                position: 'absolute',
-              }} className="Banner__title">
-                Join my mission to eat <br/>
-                30 tacos in 30 hours for <br/>
-                my 30th birthday</h2>
+            <video autoPlay loop muted playsInline
+              ref={this.video}
+              poster={png}
+              style={{
+                flex: '1 1 0%',
+                width: '100%',
+                objectFit: 'fill',
+              }}>
+              <source src={webm} type="video/webm" />
+              <source src={mp4} type="video/mp4" />
+            </video>
+            <h2 style={{
+              textAlign: 'center',
+              color: 'white',
+              textTransform: 'uppercase',
+              textShadow: '2px 2px 5px black',
+              position: 'absolute',
+            }} className="Banner__title">
+              Join my mission to eat <br/>
+              30 tacos in 30 hours for <br/>
+              my 30th birthday</h2>
           </div>
         </Parallax>
         <Parallax

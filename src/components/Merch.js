@@ -63,7 +63,6 @@ class Merch extends Component {
               </div>
             </div>
             <div className="col-md-8 col-xs-12 pt-5 pt-md-0">
-
               <p>
                 For a minimum donation of $10, order a custom-designed, handmade pin to commemorate Tour de Taco. All of the proceeds will be donated to RAICES Texas & Texas Civil Rights Project.
               </p>

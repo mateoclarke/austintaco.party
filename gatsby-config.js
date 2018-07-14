@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: ``, // TODO
-    title: `Mateo's Tour de Taco`,
+    siteUrl: `atxtacotour.com`,
+    title: `Austin Tour de Taco`,
     keywords:  `
       mateo,
       taco,
       tour,
-      birthday,
-      mateo clarke
+      tour de taco,
+      austin tacos,
+      austin
     `,
-    description: 'Can he do it?',
-    facebookUrl: ``, // TODO
+    description: 'Austin Tour de Taco is pub-crawl style journey across Austin to celebrate Latinx culture and to raise money for immigrant rights',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "", // TODO
+        trackingId: "UA-122361932-1",
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -45,8 +45,8 @@ module.exports = {
         exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-sitemap`
-    // },
+    {
+      resolve: `gatsby-plugin-sitemap`
+    },
   ],
 }
