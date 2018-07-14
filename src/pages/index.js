@@ -21,7 +21,6 @@ class IndexPage extends Component {
   }
 
   componentDidMount () {
-    console.log(this.video)
     this.video.current.play()
   }
 
