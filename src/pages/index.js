@@ -13,6 +13,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 import webm from '../img/uglyd3.webm'
 import mp4 from '../img/uglyd3.mp4'
+import png from '../img/uglyd_still.png'
 
 class IndexPage extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class IndexPage extends Component {
           }}>
               <video autoPlay loop muted playsInline
                 ref={this.video}
+                poster={png}
                 style={{
                   flex: '1 1 0%',
                   width: '100%',
