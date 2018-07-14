@@ -123,17 +123,13 @@ class Merch extends Component {
                     <option value="venmo">Venmo</option>
                     <option value="cash_app">Cash App</option>
                   </select>
-                  {
-                    this.state.payment && (
-                      <div className="form-group" style={{ width: '100%'}}>
-                        <label className="sr-only" htmlFor="username">Username</label>
-                        <input className="form-control form-control-lg mb-2"
-                          name="username" type="text" placeholder={ this.state.payment === 'paypal' ? 'Email' : 'Phone Number or Username'}
-                          onChange={this.handleChange}
-                        />
-                      </div>
-                    )
-                  }
+                  <div className="form-group" style={{ width: '100%', display: this.state.payment ? 'none' : 'block' }}>
+                    <label className="sr-only" htmlFor="username">Username</label>
+                    <input className="form-control form-control-lg mb-2"
+                      name="username" type="text" placeholder={ this.state.payment === 'paypal' ? 'Email' : 'Phone Number or Username'}
+                      onChange={this.handleChange}
+                    />
+                  </div>
                   <button className="col-12 mb-2 btn btn-info btn-lg" type="submit" style={{ background: COLORS.pink }}>Place Order</button>
                 </div>
               </form>
