@@ -108,7 +108,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    raicesLogo: imageSharp(id: { regex: "/raices_logo/" }) {
+    raicesLogo: imageSharp(id: { regex: "/grassrootsleadership/" }) {
       sizes(maxWidth: 1500, rotate: 180) {
         ...GatsbyImageSharpSizes
       }

@@ -64,9 +64,11 @@ class Merch extends Component {
             </div>
             <div className="col-md-8 col-xs-12 pt-5 pt-md-0">
               <p>
-                For a minimum donation of $10, order a custom-designed, handmade pin to commemorate Tour de Taco. All of the proceeds will be donated to RAICES Texas & Texas Civil Rights Project.
+                For a minimum donation of $10, order a custom-designed, handmade pin to commemorate Tour de Taco. All of the proceeds will be donated to <a href="https://grassrootsleadership.org/">Grassroots Leaders</a> & <a href="https://texascivilrightsproject.org/">Texas Civil Rights Project</a>.
               </p>
-
+              <p>
+                * I had originally listed RAICES Texas as an organizaiton but I've learned from friends who work and volunteer in the space that they've recieved so much that they are donating to other non-profits themselves.
+              </p>
               <div className="row">
                 <div className="col-6 align-self-center">
                   <Img
