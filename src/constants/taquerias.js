@@ -66,18 +66,18 @@ const taquerias = {
         }
     }, {
         "geometry": {
-            "coordinates": [-97.7034393, 30.2245596],
+            "coordinates": [-97.728392, 30.240126],
             "type": "Point"
         },
         "id": 5,
         "type": "Feature",
         "properties": {
             "": 5,
-            "Address": "6301 E Riverside Dr",
+            "Address": "2015 E Riverside Dr",
             "Time": "Fri Jul 27 20:30:00 GMT-05:00 2018",
-            "Latitude": 30.2245596,
-            "Longitude": -97.7034393,
-            "Name": "La Sabroza",
+            "Latitude": 30.240126,
+            "Longitude": -97.728392,
+            "Name": "Taco More",
             "Neighborhood": "East Riverside"
         }
     }, {
