@@ -73,7 +73,7 @@ const taquerias = {
         "type": "Feature",
         "properties": {
             "": 5,
-            "Address": "2015 E Riverside Dr"
+            "Address": "2015 E Riverside Dr",
             "Time": "Fri Jul 27 20:30:00 GMT-05:00 2018",
             "Latitude": 30.240126,
             "Longitude": -97.728392,
